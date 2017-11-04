@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body ng-app="app">
+
+<h1 translate="TITLE"></h1>
+
+<p translate="TEXT"></p>
+
+<p translate="TEXT_2"></p>
+
+<p translate="TEXT_3"></p>
+
+<p translate="TEXT_4"></p>
+
+<p translate="TEXT"></p>
+
+<p translate="TEXT_2"></p>
+
+<p translate="TEXT_3"></p>
+
+<p translate="TEXT_4"></p>
+
+<p translate="NOT AVAILABLE"></p>
+
+<p translate="ONLY_ES"></p>
+
+<p translate="ONLY_FR"></p>
+
+<p translate="ONLY_EN"></p>
+
+<p translate="ONLY_DE"></p>
+
+<div ng-controller="LangCtrl">
+    <button ng-click="changeLang('de')">Deutsch</button>
+    <button ng-click="changeLang('en')">Englisch</button>
+    <button ng-click="changeLang('fr')">Franzoesisch</button>
+    <button ng-click="changeLang('es')">Spanisch</button>
+
+</div>
+
+<script src="../../js/lib/angular/angular.js"></script>
+<script src="../../js/lib/angular/angular-cookies.js"></script>
+<script src="../../js/lib/angular/i18n/translate.js"></script>
+<script src="../../js/lib/angular/i18n/service/default-interpolation.js"></script>
+<script src="../../js/lib/angular/i18n/service/loader-static-files.js"></script>
+
+
+<script src="../../js/lib/angular/i18n/service/storage-key.js"></script>
+<script src="../../js/lib/angular/i18n/service/storage-local.js"></script>
+<script src="../../js/lib/angular/i18n/service/storage-cookie.js"></script>
+<script src="../../js/lib/angular/i18n/service/translate.js"></script>
+<script src="../../js/lib/angular/i18n/directive/translate.js"></script>
+<script src="../../js/lib/angular/i18n/filter/translate.js"></script>
+
+<script>
+    var app = angular.module('app', ['pascalprecht.translate', 'ngCookies']);
+
+    app.config(function ($translateProvider) {
+        $translateProvider
+
+                .useStaticFilesLoader({
+                    prefix: 'language/',
+                    suffix: '.json'
+                })
+                .preferredLanguage('de').useLocalStorage();
+    });
+
+    app.controller('LangCtrl', function ($scope, $translate, $rootScope) {
+        $scope.changeLang = function (key) {
+            $translate.use(key);
+        };
+
+
+        $rootScope.$on('$translateChangeSuccess', function () {
+            $scope.currentStack = $translate.fallbackLanguage();
+            $scope.currentPref = $translate.preferredLanguage();
+            $scope.currentLang = $translate.use();
+        });
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>798B02CE-F776-4F55-9CF5-66956C4AD025</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CrossPFramework</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>49253492-E8C5-4C64-B9C8-213393F0610A</key>
+		<string>https://github.com/ShevYan/crossP.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CrossPFramework/CrossPFramework.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>49253492-E8C5-4C64-B9C8-213393F0610A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ShevYan/crossP.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>49253492-E8C5-4C64-B9C8-213393F0610A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>49253492-E8C5-4C64-B9C8-213393F0610A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>crossP</string>
+		</dict>
+	</array>
+</dict>
+</plist>
